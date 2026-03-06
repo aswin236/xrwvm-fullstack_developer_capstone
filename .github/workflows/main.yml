@@ -58,15 +58,7 @@ jobs:
           echo "Linted all JS files successfully"
 
 
-  lint:
-    name: Super Linter
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Run Super-Linter
+ 
         uses: super-linter/super-linter@v7.1.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
